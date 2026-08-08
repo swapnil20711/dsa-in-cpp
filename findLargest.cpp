@@ -1,6 +1,16 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+// O(n log n)
+// SC -> O(1)
+int largestElementBrute(vector<int> &nums)
+{
+    sort(nums.begin(), nums.end());
+    return nums[nums.size()-1];
+}
+
+// optimal solution 
+// O(n)
 int largestElement(vector<int> &nums)
 {
     int largest = nums[0];
@@ -15,5 +25,5 @@ int main()
 {
     vector<int> nums={3, 3, 6, 1};
 
-    cout << largestElement(nums);
+    cout << largestElementBrute(nums);
 }
