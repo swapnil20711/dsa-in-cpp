@@ -60,7 +60,7 @@ vector<int> unionArrayOptimal(vector<int> &nums1, vector<int> &nums2)
         j++;
     }
 
-    while (j < n1)
+    while (i < n1)
     {
         if (unionArr.size() == 0 || unionArr.back() != nums1[i])
         {
