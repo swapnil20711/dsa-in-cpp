@@ -35,9 +35,23 @@ int findMajority(vector<int> &nums)
     
 }
 
+int findMajorityBetter(vector<int> &nums){
+    map <int,int> mpp;
+    for (int i = 0; i < nums.size(); i++)
+    {
+        mpp[nums[i]]++;
+    }
+    for(auto it : mpp){
+        if(it.second>nums.size()/2){
+            return it.first;
+        }
+    }
+    return -1;
+}
+
 int main()
 {
     vector<int> nums = {1, 1, 1, 6};
 
-    cout << findMajority(nums);
+    cout<<findMajorityBetter(nums);
 }
